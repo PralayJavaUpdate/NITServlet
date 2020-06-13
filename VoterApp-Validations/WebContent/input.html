@@ -1,0 +1,13 @@
+
+<html>
+	<head>
+		<script language="JavaScript" src="validation.js"></script>
+	</head>
+</html>
+	<form name="frm" action="countryurl" onsubmit="return validation(this)">
+		Personal Name:<input type="text" name="pname"/><span id="nameErr"></span><br>
+		Personal Age :<input type="text" name="page"/><span id="ageErr"></span><br>
+		<!--Hidden box-->
+		<input type="hidden" name="vflag" value="no"><br>
+		<input type="submit" value="Check Voting Eligibility">
+	</form>
