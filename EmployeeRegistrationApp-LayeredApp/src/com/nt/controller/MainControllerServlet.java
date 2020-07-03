@@ -39,13 +39,7 @@ public class MainControllerServlet extends HttpServlet {
 		vo.setDoj(req.getParameter("doj"));
 		vo.setBasicSalary(req.getParameter("basicSalary"));
 		
-		//sos=res.getOutputStream();
-		//get PrintWriter stream
-		pw=res.getWriter();
-		//set content type
-		res.setContentType("text/html");
-		
-		
+				
 		//convert VO class object to DTO class object
 		dto=new EmployeeDTO();
 		dto.setEname(vo.getEname());
@@ -53,11 +47,19 @@ public class MainControllerServlet extends HttpServlet {
 		dto.setBasicSalary(Float.parseFloat(vo.getBasicSalary()));
 		dto.setDoj(java.sql.Date.valueOf(vo.getDoj()));
 		
-		pw.println(dto.getEname());
-		pw.println(dto.getEadd());
-		pw.println(dto.getBasicSalary());
-		pw.println(dto.getDoj());
+		/*
+		 * pw.println(dto.getEname()); 
+		 * pw.println(dto.getEadd());
+		 * pw.println(dto.getBasicSalary()); 
+		 * pw.println(dto.getDoj());
+		 */
 		
+		//sos=res.getOutputStream();
+		//get PrintWriter stream
+		  pw=res.getWriter();
+		//set content type
+		  res.setContentType("text/html");
+				
 		//use service class
 		try {
 			result=service.registerEmployee(dto);
