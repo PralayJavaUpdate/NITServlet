@@ -50,7 +50,7 @@ public class DownloadServlet extends HttpServlet {
 		//create InputStream pointing to the file to be downloaded
 		is=new FileInputStream(f1);
 		
-		//create InputStream pointing to response object
+		//get OnputStream pointing to response object
 		os=res.getOutputStream();
 		
 		//set values to content-disposition response header
