@@ -37,7 +37,8 @@ public class FirstServlet extends HttpServlet {
 		
 		//create form2 dynamically
 		pw.println("<body bgcolor='lightblue'>");
-		pw.println("<form action='surl' method='POST'>");
+		//pw.println("<form action='surl' method='POST'>");
+		pw.println("<form action="+res.encodeURL("surl")+" method='POST'>");
 		pw.println("<h2><center><font color='sky'>PERSONAL DETAILS</font></center></h2>");
 		
 		pw.println("<br><table border=0 align='center' bgcolor='pink'>");
